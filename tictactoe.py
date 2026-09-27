@@ -77,3 +77,18 @@ def game():
             print("\nGame Over.\n")
             print("Its a Tie!!")
 
+        if turn == 'X':
+            turn = '0'
+        else:
+            turn = 'X'
+
+    restart = input("Do you want to play again?(y/n) ")
+    if restart == 'y' or restart == 'Y':
+        for key in board_keys:
+            theBoard[key] = " "
+
+        game()
+if __name__== "__main__":
+    game()
+
+
